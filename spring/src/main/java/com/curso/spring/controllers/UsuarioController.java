@@ -31,12 +31,21 @@ public class UsuarioController {
 	@RequestMapping(value= "api/usuarios", method = RequestMethod.GET)
 	public List<Usuario> getUsuarios(@RequestHeader(value="Authorization") String token) {
 		
-		String usuarioId = jwtUtil.getValue(token);
-		if(usuarioId == null) {
-			return new ArrayList<>();
-		}
-		return usuarioDao.getUsuarios();
-	}
+//		String usuarioId = jwtUtil.getKey(token);
+//		if(usuarioId == null) {
+//			return new ArrayList<>();
+//		}
+//		return usuarioDao.getUsuarios();
+//	}
+//		if (!validarToken(token)) { return null; }
+
+	        return usuarioDao.getUsuarios();
+	    }
+
+	    private boolean validarToken(String token) {
+	        String usuarioId = jwtUtil.getKey(token);
+	        return usuarioId != null;
+	    }
 	
 	@RequestMapping(value = "api/usuario/{id}", method = RequestMethod.DELETE)
 	public void eliminarUsuario(@PathVariable Long id) {
