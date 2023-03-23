@@ -32,6 +32,6 @@ async function registrarUsuario(){
   });
   
   alert("La cuenta fue creada con existo");
-  window.location.href = 'login.html';
+  window.location.href = 'usuarios.html';
 
 }
