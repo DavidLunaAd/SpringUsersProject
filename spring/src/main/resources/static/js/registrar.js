@@ -14,6 +14,7 @@ async function registrarUsuario(){
 	datos.email= document.getElementById('txtEmail').value ;
 	datos.telefono= document.getElementById('txtTelefono').value ;
 	datos.password= document.getElementById('txtPassword').value ;
+	datos.ciudad= document.getElementById('txtCiudad').value ;
 	
 	let repetirPss = document.getElementById('txtRepetirPassword').value ;
 	
@@ -31,7 +32,7 @@ async function registrarUsuario(){
     body:JSON.stringify(datos)
   });
   
-  alert("La cuenta fue creada con existo");
+  alert('El usuario "'+ datos.nombre +'" fue creado con exito');
   window.location.href = 'usuarios.html';
 
 }

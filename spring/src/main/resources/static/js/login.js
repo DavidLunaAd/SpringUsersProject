@@ -8,10 +8,12 @@ $(document).ready(function() {
 async function iniciarSesion(){
 	
 	let datos ={};
-	datos.email= document.getElementById('txtEmail').value ;
-	datos.password= document.getElementById('txtPassword').value ;
+	datos.email= "jsuan@jhsu.cj";//document.getElementById('txtEmail').value ;
+	datos.password="654321";// document.getElementById('txtPassword').value ;
 	
-	  const request = await fetch('api/login', {
+	
+	
+	  const request = await fetch('/login', {
 	    method: 'POST',
 	    headers: {
 	      'Accept': 'application/json',

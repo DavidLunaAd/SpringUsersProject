@@ -7,13 +7,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "usuarios")
+//@Entity
+//@Table(name = "usuarios")
 public class Usuario {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "id")
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Column(name = "id")
 	private String id;
 	
 	@Column(name = "nombre")
@@ -31,7 +31,16 @@ public class Usuario {
 	@Column(name = "password")
 	private String password;
 	
+	@Column(name = "ciudad")
+	private String ciudad;
 	
+	
+	public String getCiudad() {
+		return ciudad;
+	}
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
 	public String getPassword() {
 		return password;
 	}

@@ -15,6 +15,10 @@ import com.google.cloud.firestore.Query;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.WriteResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.UserRecord;
+import com.google.firebase.auth.UserRecord.CreateRequest;
 import com.google.firebase.cloud.FirestoreClient;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +33,21 @@ public class UsuarioService {
 	
 	
 	    public static final String COL_NAME="usuarios";
+	    
+	    
+	    public static void crearUsuario(String email, String password) {
+	        FirebaseAuth auth = FirebaseAuth.getInstance();
+	        CreateRequest request = new CreateRequest()
+	            .setEmail(email)
+	            .setPassword(password);
+	        try {
+	            UserRecord userRecord = auth.createUser(request);
+	            System.out.println("Successfully created user: " + userRecord.getUid());
+	        } catch (FirebaseAuthException e) {
+	            System.err.println("Error creating user: " + e.getMessage());
+	        }
+	    }
+	    
 	    
 	    public List<Usuario> obtenerTodosLosUsuarios() throws InterruptedException, ExecutionException {
 	        Firestore dbFirestore = FirestoreClient.getFirestore();
@@ -72,9 +91,9 @@ public class UsuarioService {
 	    }
 	    
 
-	    public Usuario getPatientDetails(String name) throws InterruptedException, ExecutionException {
+	    public Usuario getDetalleUsuario(String id) throws InterruptedException, ExecutionException {
 	        Firestore dbFirestore = FirestoreClient.getFirestore();
-	        DocumentReference documentReference = dbFirestore.collection(COL_NAME).document(name);
+	        DocumentReference documentReference = dbFirestore.collection(COL_NAME).document(id);
 	        ApiFuture<DocumentSnapshot> future = documentReference.get();
 
 	        DocumentSnapshot document = future.get();

@@ -4616,7 +4616,7 @@
 	 *  @param {object} obj Object to convert
 	 *  @returns {object} Inverted object
 	 *  @memberof DataTable#oApi
-	 */
+	 
 	function _fnSearchToHung ( obj )
 	{
 		return {
@@ -4625,7 +4625,7 @@
 			bRegex:           obj.regex,
 			bCaseInsensitive: obj.caseInsensitive
 		};
-	}
+	}*/
 	
 	/**
 	 * Generate the node required for the info display
@@ -11780,8 +11780,8 @@
 			 *        }
 			 *      } );
 			 *    } );
-			 */
-			"sSearch": "Search:",
+			 
+			"sSearch": "Search:",*/
 	
 	
 			/**
@@ -14449,7 +14449,7 @@
 	$.extend( _ext, {
 		afnFiltering: _ext.search,
 		aTypes:       _ext.type.detect,
-		ofnSearch:    _ext.type.search,
+		//ofnSearch:    _ext.type.search,
 		oSort:        _ext.type.order,
 		afnSortData:  _ext.order,
 		aoFeatures:   _ext.feature,
@@ -15149,7 +15149,7 @@
 		_fnFilterCustom: _fnFilterCustom,
 		_fnFilterColumn: _fnFilterColumn,
 		_fnFilter: _fnFilter,
-		_fnFilterCreateSearch: _fnFilterCreateSearch,
+		//_fnFilterCreateSearch: _fnFilterCreateSearch,
 		_fnEscapeRegex: _fnEscapeRegex,
 		_fnFilterData: _fnFilterData,
 		_fnFeatureHtmlInfo: _fnFeatureHtmlInfo,

@@ -2307,6 +2307,11 @@ textarea.form-control {
   }
 }
 
+.btnRegistrar {
+	align-items: right;
+	vertical-align: end;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
