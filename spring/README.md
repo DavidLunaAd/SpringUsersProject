@@ -6,9 +6,9 @@ La aplicación llama los datos con un servicio Rest y muestra y ejecuta las cons
 
 ## Previsualización
 
-[![DvD Admin lista básica](/spring/src/main/resources/static/img/prev2.png)
+![DvD Admin lista básica](/spring/src/main/resources/static/img/prev2.png)
 
-[!Detalles de elemento seleccionado](/spring/src/main/resources/static/img/prev1.png)**
+![Detalles de elemento seleccionado](/spring/src/main/resources/static/img/prev1.png)
 
 ## Concepto
 
@@ -27,9 +27,11 @@ You must have npm installed globally in order to use this build environment. Thi
 
 ## Mas info
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+Para este proyecto aun queda mucho por trabajar, pero las bases de comunicación entre el backend y el front están prefectamente disponibles para desarrollar todo tipo de aplicaciones. Muchas mas infrmacion y recursos se enceuentran en la documentación y servicios utilizados.
 
+* <https://spring.io/>
 * <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+* <https://mvnrepository.com/>
+* <https://firebase.google.com>
 
 David.
