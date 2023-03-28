@@ -3680,7 +3680,7 @@
 			else if ( cOption == 'l' && features.bPaginate && features.bLengthChange )
 			{
 				/* Length */
-				featureNode = _fnFeatureHtmlLength( oSettings );
+				//featureNode = _fnFeatureHtmlLength( oSettings );
 			}
 			else if ( cOption == 'f' && features.bFilter )
 			{
@@ -4215,7 +4215,7 @@
 		var language = settings.oLanguage;
 		var previousSearch = settings.oPreviousSearch;
 		var features = settings.aanFeatures;
-		var input = '<input type="search" class="'+classes.sFilterInput+'"/>';
+		var input = '';
 	
 		var str = language.sSearch;
 		str = str.match(/_INPUT_/) ?
@@ -4236,7 +4236,7 @@
 			/* Now do the filter */
 			if ( val != previousSearch.sSearch ) {
 				_fnFilterComplete( settings, {
-					"sSearch": val,
+					//"sSearch": val,
 					"bRegex": previousSearch.bRegex,
 					"bSmart": previousSearch.bSmart ,
 					"bCaseInsensitive": previousSearch.bCaseInsensitive
@@ -4601,7 +4601,7 @@
 	function _fnSearchToCamel ( obj )
 	{
 		return {
-			search:          obj.sSearch,
+			//search:          obj.sSearch,
 			smart:           obj.bSmart,
 			regex:           obj.bRegex,
 			caseInsensitive: obj.bCaseInsensitive
@@ -4854,7 +4854,7 @@
 		var
 			classes  = settings.oClasses,
 			tableId  = settings.sTableId,
-			menu     = settings.aLengthMenu,
+			//menu     = settings.aLengthMenu,
 			d2       = Array.isArray( menu[0] ),
 			lengths  = d2 ? menu[0] : menu,
 			language = d2 ? menu[1] : menu;
@@ -4880,7 +4880,7 @@
 		}
 	
 		div.children().append(
-			settings.oLanguage.sLengthMenu.replace( '_MENU_', select[0].outerHTML )
+		//	settings.oLanguage.sLengthMenu.replace( '_MENU_', select[0].outerHTML )
 		);
 	
 		// Can't use `select` variable as user might provide their own and the
@@ -9123,7 +9123,7 @@
 			}
 	
 			_fnFilterComplete( settings, $.extend( {}, settings.oPreviousSearch, {
-				"sSearch": input+"",
+			//	"sSearch": input+"",
 				"bRegex":  regex === null ? false : regex,
 				"bSmart":  smart === null ? true  : smart,
 				"bCaseInsensitive": caseInsen === null ? true : caseInsen
@@ -9150,7 +9150,7 @@
 				}
 	
 				$.extend( preSearch[ column ], {
-					"sSearch": input+"",
+				//	"sSearch": input+"",
 					"bRegex":  regex === null ? false : regex,
 					"bSmart":  smart === null ? true  : smart,
 					"bCaseInsensitive": caseInsen === null ? true : caseInsen
@@ -11416,7 +11416,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+				//"sFirst": "First",
 	
 	
 				/**
@@ -11439,7 +11439,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+			//	"sLast": "Last",
 	
 	
 				/**
@@ -11462,7 +11462,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+			//	"sNext": "Next",
 	
 	
 				/**
@@ -11701,7 +11701,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			//"sLengthMenu": "Show _MENU_ entries",
 	
 	
 			/**
@@ -11781,7 +11781,7 @@
 			 *      } );
 			 *    } );
 			 
-			"sSearch": "Search:",*/
+			"sSearch": "",*/
 	
 	
 			/**
@@ -14559,7 +14559,7 @@
 	
 	
 	$.extend( extPagination, {
-		simple: function ( page, pages ) {
+	/*	simple: function ( page, pages ) {
 			return [ 'previous', 'next' ];
 		},
 	
@@ -14587,7 +14587,7 @@
 		_numbers: _numbers,
 	
 		// Number of number buttons (including ellipsis) to show. _Must be odd!_
-		numbers_length: 7
+		numbers_length: 7*/
 	} );
 	
 	

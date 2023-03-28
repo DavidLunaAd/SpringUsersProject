@@ -4,7 +4,7 @@ $(document).ready(function() {
 	cargarUsuarios();
 	
   $('#usuarios').DataTable();
-  
+   
   
   	function actualizarHora() {
 						      var elementoReloj = document.getElementById('reloj');
