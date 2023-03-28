@@ -1,8 +1,8 @@
-# [Dvd Admin - Bootstrap)
+# DvD Admin - Spring - Bootstrap
 
 [DvD Admin](/spring/src/main/resources/static/img/dvd.svg) es una modificación de un template de bootstrap-sb-admin. Construido con Spring, y con acceso a base de datos real.
 
-La aplicación llama los datos con un servicio Rest y muestra y ejecuta las consultas que enseña en un front adaptado con HTML, JAVASCRIPT Y CSS-
+La aplicación llama los datos con un servicio Rest y muestra y ejecuta las consultas que enseña en un front adaptado con HTML, JAVASCRIPT Y CSS.
 
 ## Previsualización
 
